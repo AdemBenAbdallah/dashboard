@@ -1,4 +1,4 @@
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import './histogramGraph.scss';
 
 const HistogramGraph = () => {
@@ -42,6 +42,7 @@ const HistogramGraph = () => {
 
 
     const yTickValues = [0, 100, 200, 300, 400];
+
 
     return (
         <div className="histogram-graph">
@@ -88,7 +89,6 @@ const HistogramGraph = () => {
                             }}
                         />
                         <YAxis axisLine={false} domain={[0, 400]} ticks={yTickValues} />
-                        <Tooltip />
                         <Bar
                             dataKey="pv"
                             barSize={32}
