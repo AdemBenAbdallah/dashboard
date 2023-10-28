@@ -1,0 +1,60 @@
+@import "../../styles//variables.scss";
+
+.menu {
+  h3 {
+    font-weight: 700;
+    padding: 2.57rem 0 0;
+    text-align: center;
+    color: $primary-color-2;
+  }
+  .item {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    .listItem {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      border-radius: 0.5rem;
+      &.selected {
+        background-color: $primary-color-4;
+      }
+      .listItemTitle {
+        font-weight: 500;
+        font-size: 0.87rem;
+        color: $grayscale-color-3;
+        &.selected {
+          color: $grayscale-color-4;
+        }
+      }
+    }
+  }
+  .profile-button {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: none;
+    color: $grayscale-color-3;
+    background-color: $grayscale-color-1;
+    margin-top: 2rem;
+  }
+  .signout {
+    margin-top: 9.8rem;
+    width: 11rem;
+    height: 3.125rem;
+    padding: 0 2rem;
+    color: #e0574e;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 200%; 
+    border-radius: 0.5rem;
+    background-color: $grayscale-color-1;
+    border: 1px solid #fceeed;
+  }
+}

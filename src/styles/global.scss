@@ -1,0 +1,29 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Habibi&family=IBM+Plex+Sans+Arabic:wght@200;300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+}
+
+.menuContainer {
+  padding: 0 1.25rem;
+  width: 16rem;
+  border-right: 2px solid $grayscale-color-2;
+}
+
+.contentContainer {
+  padding: 2.5rem 5.38rem 2.5rem 2.5rem;
+  width: 100%;
+}
