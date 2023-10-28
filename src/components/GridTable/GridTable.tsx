@@ -39,8 +39,6 @@ const GridTable = () => {
             id: "01252",
             Fournisseur: 'Supplier 1',
             Client: {
-                img: './Ellipse.svg',
-                name: 'Client 1',
             },
             'Date de création': '2023/10/01-12:30',
             Livreur: {
@@ -60,8 +58,6 @@ const GridTable = () => {
             },
             'Date de création': '2023/10/01-12:30',
             Livreur: {
-                img: './EllipseLiveur.svg',
-                name: 'Livreur 1',
             },
             Statut: 'Compléter',
             color: "#4055A8",
@@ -87,13 +83,25 @@ const GridTable = () => {
                         <td className='id'>{row.id}</td>
                         <td className='fournisseur'>{row.Fournisseur}</td>
                         <td className='details'>
-                            <img src={row.Client.img} alt="Client" />
-                            <span>{row.Client.name}</span>
+                            {row.Client.name ? (
+                                <>
+                                    <img src={row.Client.img} alt="Client" />
+                                    <span>{row.Client.name}</span>
+                                </>
+                            ) : (
+                                <span>Inconnu</span>
+                            )}
                         </td>
                         <td className='date'>{row['Date de création']}</td>
                         <td className='details'>
-                            <img src={row.Livreur.img} alt="Livreur" />
-                            <span>{row.Livreur.name}</span>
+                            {row.Livreur.name ? (
+                                <>
+                                    <img src={row.Livreur.img} alt="Livreur" />
+                                    <span>{row.Livreur.name}</span>
+                                </>
+                            ) : (
+                                <span>-</span>
+                            )}
                         </td>
                         <td>
                             <ButtonStatus color={row.color} text={row.Statut} backgroundColor={row.backgroundColor} />

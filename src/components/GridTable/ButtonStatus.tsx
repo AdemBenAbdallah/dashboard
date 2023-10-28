@@ -20,7 +20,9 @@ const ButtonStatus: React.FC<ButtonStatusProps> = ({ color, text, backgroundColo
                 height: "1.75rem",
                 borderRadius: "2.5rem",
                 border: "none",
-                padding: "3px"
+                padding: "3px",
+                outline: "none",
+                cursor:"pointer"
             }}
         >
             <span
