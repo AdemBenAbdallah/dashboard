@@ -1,13 +1,11 @@
 import { Cell, Pie, PieChart, Tooltip } from "recharts";
 import "./pieChartBox.scss";
+import {  dataByMonthYear } from "../../data";
 
-const data = [
-    { name: "Annuler", value: 12, color: "#FCDFD4" },
-    { name: "Compléter", value: 164, color: "#C24E21" },
-    { name: "En attente", value: 30, color: "#F69069" },
-];
 
-const PieChartBox = () => {
+const PieChartBox = ({ selectedMonthYear }: { selectedMonthYear: string }) => {
+    const data = dataByMonthYear[selectedMonthYear];
+
     return (
         <div className="pieChartBox">
             <div className="chart">

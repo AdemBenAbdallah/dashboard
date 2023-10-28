@@ -1,14 +1,6 @@
 import { Link } from 'react-router-dom';
 import './menu.scss';
-import {
-    Box,
-    Element4,
-    Flag,
-    Graph,
-    Profile,
-    ReceiptDisscount,
-    Shop,
-} from 'iconsax-react';
+import { menuItems } from '../../data';
 
 interface MenuItem {
     to: string;
@@ -26,59 +18,9 @@ const MenuItem = ({ to, isSelected, icon, title }: MenuItem) => (
 );
 
 const Menu = () => {
-    const isSelected = 'Tableau de bord';
 
-    const menuItems = [
-        {
-            to: '/',
-            isSelected,
-            icon: <Graph size="18" color={isSelected === 'Tableau de bord' ? '#F26129' : '#9AA5B1'} variant="Bulk" />,
-            title: 'Tableau de bord',
-        },
-        {
-            to: '/',
-            isSelected,
-            icon: <Element4 size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Catégories',
-        },
-        {
-            to: '/',
-            isSelected,
-            icon: <Shop size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Fournisseurs',
-        },
-        {
-            to: '/',
-            isSelected,
-            icon: <Element4 size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Livreurs',
-        },
-        {
-            to: '/',
-            isSelected,
-            icon: <Profile size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Clients',
-        },
 
-        {
-            to: '/',
-            isSelected,
-            icon: <Box size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Commandes',
-        },
-        {
-            to: '/',
-            isSelected,
-            icon: <Flag size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Advertissement',
-        },
-        {
-            to: '/',
-            isSelected,
-            icon: <ReceiptDisscount size="18" color="#9AA5B1" variant="Bulk" />,
-            title: 'Coupons & Promos',
-        },
-    ];
+
 
     return (
         <div className="menu">

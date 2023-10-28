@@ -1,8 +1,11 @@
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import './histogramGraph.scss';
+import { useState } from 'react';
+import { options } from '../../data';
 
 const HistogramGraph = () => {
-    const data = [
+    const [selectedOption, setSelectedOption] = useState('last7days');
+    const [data, setData] = useState([
         {
             name: '23/03',
             uv: 100,
@@ -38,7 +41,14 @@ const HistogramGraph = () => {
             uv: 200,
             pv: 200,
         },
-    ];
+    ]);
+
+
+    const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const newOption = event.target.value;
+        setSelectedOption(newOption);
+        setData(options[newOption]);
+    };
 
 
     const yTickValues = [0, 100, 200, 300, 400];
@@ -60,12 +70,11 @@ const HistogramGraph = () => {
                         </div>
                     </div>
                 </div>
-                <select className="Days">
+                <select className="Days" value={selectedOption} onChange={handleOptionChange}>
                     <option value="last7days">Les 7 derniers jours</option>
                     <option value="04/2023">Avril 2023</option>
                     <option value="05/2023">Mai 2023</option>
                 </select>
-
             </div>
             <div className="graph">
                 <ResponsiveContainer width="100%" height={240}>
