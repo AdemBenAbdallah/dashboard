@@ -25,12 +25,12 @@ const HistogramGraph = () => {
         },
         {
             name: '27/03',
-            uv: 300,
+            uv: 100,
             pv: 200,
         },
         {
             name: '28/03',
-            uv: 350,
+            uv: 150,
             pv: 100,
         },
         {
@@ -80,15 +80,23 @@ const HistogramGraph = () => {
                             bottom: 5,
                         }}
                     >
-                        <CartesianGrid strokeDasharray="3 4" />
+                        <CartesianGrid
+                            horizontal={true}
+                            vertical={false}
+                            strokeDasharray="20 10"
+                            stroke="rgba(128, 128, 128, 0.2)"
+                        />
                         <XAxis
                             dataKey="name"
                             axisLine={false}
+                            tickLine={false}
                             tick={{
                                 dy: 10,
                             }}
                         />
-                        <YAxis axisLine={false} domain={[0, 400]} ticks={yTickValues} />
+                        <YAxis axisLine={false} domain={[0, 400]} ticks={yTickValues} tickLine={false} tick={{
+                            fontWeight: '600',
+                        }} />
                         <Bar
                             dataKey="pv"
                             barSize={32}
