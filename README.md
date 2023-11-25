@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-url link for this project: https://spontaneous-gecko-e28379.netlify.app/
+URL link for this project: https://spontaneous-gecko-e28379.netlify.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
